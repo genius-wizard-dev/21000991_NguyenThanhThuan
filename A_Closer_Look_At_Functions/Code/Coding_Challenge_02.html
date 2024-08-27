@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding_Challenge_02</title>
+</head>
+<body style="width: 100%; height:100vh">
+    <h1>Header</h1>
+    <script>
+        (function () {
+            const header = document.querySelector('h1');
+            header.style.color = 'red';
+
+            document.body.addEventListener('click', function() {
+                header.style.color = 'blue';
+            });
+        })();
+    </script>
+</body>
+</html> 
