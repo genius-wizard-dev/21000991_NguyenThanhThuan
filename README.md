@@ -8,6 +8,7 @@
 - [Developer Skills & Editor Setup](#developer-skills--editor-setup)
 - [JavaScript In The Browser](#javascript-in-the-browser)
 - [Data Structures, Modern Operators, and Strings](#data-structures-modern-operators-and-strings)
+- [A Closer Look at Functions](#a-closer-look-at-functions)
 
 ## JavaScript Fundamentals
 
@@ -61,3 +62,7 @@ Data Structures
   ![Coding Challenge 3](Data_Structures_Modern_Operators_And_Strings/Images/Coding_Challenge_03.jpg)
 - [Coding Challenge 4](Data_Structures_Modern_Operators_And_Strings/Code/Coding_Challenge_04.html)
   ![Coding Challenge 4](Data_Structures_Modern_Operators_And_Strings/Images/Coding_Challenge_04.jpg)
+
+## A Closer Look at Functions
+- [Coding Challenge 1](A_Closer_Look_At_Functions/Code/Coding_Challenge_01.js)
+  ![Coding Challenge 1](A_Closer_Look_At_Functions/Images/Coding_Challenge_01.jpg)
