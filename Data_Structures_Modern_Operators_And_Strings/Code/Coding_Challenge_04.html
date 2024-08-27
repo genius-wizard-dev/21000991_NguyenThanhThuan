@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert</title>
+</head>
+<body>
+  <textarea id="input"></textarea>
+  <br>
+  <button onclick="convertToCamelCase()">Convert</button>
+  <div id="output"></div>
+
+  <script>
+    function convertToCamelCase() {
+      const textarea = document.getElementById('input');
+      const outputDiv = document.getElementById('output');
+      const text = textarea.value;
+      const variables = text.split('\n');
+      let result = '';
+      variables.forEach((variable, index) => {
+        const trimmed = variable.trim();
+        const [first, second] = trimmed.toLowerCase().split('_');
+        const camelCase = first + second.charAt(0).toUpperCase() + second.slice(1);
+        const ticks = '✅'.repeat(index + 1);
+        result += `${camelCase} ${ticks}<br>`;
+      });
+
+      outputDiv.innerHTML = result;
+    }
+  </script>
+</body>
+</html>
