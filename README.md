@@ -64,5 +64,6 @@ Data Structures
   ![Coding Challenge 4](Data_Structures_Modern_Operators_And_Strings/Images/Coding_Challenge_04.jpg)
 
 ## A Closer Look at Functions
-- [Coding Challenge 1](A_Closer_Look_At_Functions/Code/Coding_Challenge_01.js)
+
+- [Coding Challenge 1](A_Closer_Look_At_Functions/Code/Coding_Challenge_01.html)
   ![Coding Challenge 1](A_Closer_Look_At_Functions/Images/Coding_Challenge_01.jpg)
