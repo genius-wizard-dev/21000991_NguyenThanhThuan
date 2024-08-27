@@ -67,3 +67,5 @@ Data Structures
 
 - [Coding Challenge 1](A_Closer_Look_At_Functions/Code/Coding_Challenge_01.html)
   ![Coding Challenge 1](A_Closer_Look_At_Functions/Images/Coding_Challenge_01.jpg)
+- [Coding Challenge 2](A_Closer_Look_At_Functions/Code/Coding_Challenge_02.html)
+  ![Coding Challenge 2](A_Closer_Look_At_Functions/Images/Coding_Challenge_02.jpg)
