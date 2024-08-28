@@ -1,0 +1,1 @@
+Array<number>(dogs.length);
