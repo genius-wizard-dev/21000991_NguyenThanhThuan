@@ -9,6 +9,7 @@
 - [JavaScript In The Browser](#javascript-in-the-browser)
 - [Data Structures, Modern Operators, and Strings](#data-structures-modern-operators-and-strings)
 - [A Closer Look at Functions](#a-closer-look-at-functions)
+- [Working_With_Arrays](#working_with_arrays)
 
 ## JavaScript Fundamentals
 
@@ -69,3 +70,14 @@ Data Structures
   ![Coding Challenge 1](A_Closer_Look_At_Functions/Images/Coding_Challenge_01.jpg)
 - [Coding Challenge 2](A_Closer_Look_At_Functions/Code/Coding_Challenge_02.html)
   ![Coding Challenge 2](A_Closer_Look_At_Functions/Images/Coding_Challenge_02.jpg)
+
+## Working With Arrays
+
+- [Coding Challenge 1](Working_With_Arrays/Code/Coding_Challenge_01.js)
+  ![Coding Challenge 1](Working_With_Arrays/Images/Coding_Challenge_01.jpg)
+- [Coding Challenge 2](Working_With_Arrays/Code/Coding_Challenge_02.js)
+  ![Coding Challenge 2](Working_With_Arrays/Images/Coding_Challenge_02.jpg)
+- [Coding Challenge 3](Working_With_Arrays/Code/Coding_Challenge_03.js)
+  ![Coding Challenge 3](Working_With_Arrays/Images/Coding_Challenge_03.jpg)
+- [Coding Challenge 4](Working_With_Arrays/Code/Coding_Challenge_04.js)
+  ![Coding Challenge 4](Working_With_Arrays/Images/Coding_Challenge_04.jpg)
