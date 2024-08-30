@@ -87,3 +87,5 @@ Data Structures
 
 - [Coding Challenge 1](Object_Oriented_Programming/Code/Coding_Challenge_01.js)
   ![Coding Challenge 1](Object_Oriented_Programming/Images/Coding_Challenge_01.jpg)
+- [Coding Challenge 1](Object_Oriented_Programming/Code/Coding_Challenge_02.js)
+  ![Coding Challenge 1](Object_Oriented_Programming/Images/Coding_Challenge_02.jpg)
