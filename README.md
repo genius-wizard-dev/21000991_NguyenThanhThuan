@@ -10,6 +10,7 @@
 - [Data Structures, Modern Operators, and Strings](#data-structures-modern-operators-and-strings)
 - [A Closer Look at Functions](#a-closer-look-at-functions)
 - [Working_With_Arrays](#working_with_arrays)
+- [Opject Oriented Programming (OOP)](#opject-oriented-programming)
 
 ## JavaScript Fundamentals
 
@@ -81,3 +82,8 @@ Data Structures
   ![Coding Challenge 3](Working_With_Arrays/Images/Coding_Challenge_03.jpg)
 - [Coding Challenge 4](Working_With_Arrays/Code/Coding_Challenge_04.js)
   ![Coding Challenge 4](Working_With_Arrays/Images/Coding_Challenge_04.jpg)
+
+## Opject Oriented Programming
+
+- [Coding Challenge 1](Object_Oriented_Programming/Code/Coding_Challenge_01.js)
+  ![Coding Challenge 1](Object_Oriented_Programming/Images/Coding_Challenge_01.jpg)
