@@ -33,7 +33,6 @@ EV.prototype.accelerate = function() {
 
 const tesla = new EV('Tesla', 120, 23);
 
-// Experiment with the methods
 console.log(tesla);
 tesla.accelerate();
 tesla.brake();
