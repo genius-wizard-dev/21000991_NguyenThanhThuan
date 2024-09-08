@@ -11,6 +11,7 @@
 - [A Closer Look at Functions](#a-closer-look-at-functions)
 - [Working_With_Arrays](#working_with_arrays)
 - [Opject Oriented Programming (OOP)](#opject-oriented-programming)
+- [Asynchronous JavaScript](#asynchronous-javascript)
 
 ## JavaScript Fundamentals
 
@@ -125,3 +126,14 @@
 - [Coding Challenge 4](Object_Oriented_Programming/Code/Coding_Challenge_04.js)
 
   ![Coding Challenge 4](Object_Oriented_Programming/Images/Coding_Challenge_04.jpg)
+
+## Asynchronous JavaScript
+
+- [Coding Challenge 1](Asynchronous_JavaScript/Code/Coding_Challenge_01.js)
+  ![Coding Challenge 1](Asynchronous_JavaScript/Images/Coding_Challenge_01.jpg)
+- [Coding Challenge 2](Asynchronous_JavaScript/Code/Coding_Challenge_02.js)
+  ![Coding Challenge 2](Asynchronous_JavaScript/Images/Coding_Challenge_02.jpg)
+- [Coding Challenge 3 Part 01](Asynchronous_JavaScript/Code/Part_01/index.html)
+  ![Coding Challenge 3 Part 01](Asynchronous_JavaScript/Images/Coding_Challenge_03_01.jpg)
+- [Coding Challenge 3 Part 02](Asynchronous_JavaScript/Code/Part_02/index.html)
+  ![Coding Challenge 3 Part 02](Asynchronous_JavaScript/Images/Coding_Challenge_03_02.jpg)
