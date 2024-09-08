@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge 3</title>
+</head>
+<body>
+  <div class="images"></div>
+  <script>
+    function createImage(imgPath) {
+        return new Promise((resolve, reject) => {
+          const img = document.createElement('img');
+          img.src = imgPath;
+      
+          img.addEventListener('load', () => {
+            document.querySelector('.images').appendChild(img);
+            resolve(img);
+          });
+      
+          img.addEventListener('error', () => {
+            reject(new Error('Image not found'));
+          });
+        });
+      }
+    
+    function wait(seconds) {
+        return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+      }
+      
+    async function loadNPause() {
+        try {
+          let img = await createImage('../img/1.jpg');
+          await wait(2);
+          img.style.display = 'none';
+
+          img = await createImage('../img/2.jpg');
+          await wait(2);
+          img.style.display = 'none';
+        } catch (error) {
+          console.error(error);
+        }
+    }
+    
+    loadNPause();
+  </script>
+</body>
+</html>
