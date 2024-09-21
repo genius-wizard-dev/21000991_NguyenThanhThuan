@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Pressable, Image } from 'react-native'
 
-export default function Screen_01() {
+export default function Product_Detail() {
 	return (
 		<View style={styles.container}>
 			<Image source={require('../assets/vs_black.png')} style={styles.productImage} />

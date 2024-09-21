@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { Screen_01 } from './screen'
+import { Product_Detail } from './screen'
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<Screen_01 />
+			<Product_Detail />
 		</View>
 	)
 }
