@@ -1,29 +1,53 @@
 import React from 'react'
 import { View, Text, StyleSheet, Pressable, Image } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
-export default function Product_Detail() {
+const productData = {
+  title: "Điện Thoại Vsmart Joy 3 - Hàng chính hãng",
+  rating: 5,
+  ratingCount: 828,
+  price: "1.790.000 đ",
+  oldPrice: "1.790.000 đ",
+  discountText: "Ở ĐÂU RẺ HƠN HOÀN TIỀN",
+  colorSelectionText: "4 MÀU-CHỌN MÀU",
+  buyButtonText: "CHỌN MUA",
+  colors: ['black', 'red', 'blue', 'silver']
+}
+
+export default function Product() {
+    const navigation = useNavigation()
+    const [color, setColor] = React.useState('black')
+
+    const handleColorSelection = () => {
+        navigation.navigate('Product_Color', { productData, color, setColor })
+    }
 	return (
 		<View style={styles.container}>
-			<Image source={require('../assets/vs_black.png')} style={styles.productImage} />
+			<Image source={color === 'black' ? require('../assets/vs_black.png') : 
+							color === 'red' ? require('../assets/vs_red.png') :
+							color === 'blue' ? require('../assets/vs_blue.png') :
+							color === 'silver' ? require('../assets/vs_silver.png') :
+							require('../assets/vs_black.png')} 
+				   style={styles.productImage} />
 			<View style={styles.infoContainer}>
-				<Text style={styles.productTitle}>Điện Thoại Vsmart Joy 3 - Hàng chính hãng</Text>
+				<Text style={styles.productTitle}>{productData.title}</Text>
 				<View style={styles.ratingContainer}>
-					<Text style={styles.rating}>⭐ ⭐ ⭐ ⭐ ⭐</Text>
-					<Text style={styles.ratingCount}>(Xem 828 đánh giá)</Text>
+					<Text style={styles.rating}>{'⭐'.repeat(productData.rating)}</Text>
+					<Text style={styles.ratingCount}>(Xem {productData.ratingCount} đánh giá)</Text>
 				</View>
 				<View style={styles.priceContainer}>
-					<Text style={styles.price}>1.790.000 đ</Text>
-					<Text style={styles.oldPrice}>1.790.000 đ</Text>
+					<Text style={styles.price}>{productData.price}</Text>
+					<Text style={styles.oldPrice}>{productData.oldPrice}</Text>
 				</View>
 				<View style={styles.discountContainer}>
-					<Text style={styles.discountText}>Ở ĐÂU RẺ HƠN HOÀN TIỀN</Text>
+					<Text style={styles.discountText}>{productData.discountText}</Text>
 				</View>
-				<Pressable style={styles.colorSelectionButton}>
-					<Text style={styles.colorSelectionText}>4 MÀU-CHỌN MÀU</Text>
+				<Pressable style={styles.colorSelectionButton} onPress={handleColorSelection}>
+					<Text style={styles.colorSelectionText}>{productData.colorSelectionText}</Text>
 					<Text style={styles.colorSelectionArrow}>{'>'}</Text>
 				</Pressable>
 				<Pressable style={styles.buyButton}>
-					<Text style={styles.buyButtonText}>CHỌN MUA</Text>
+					<Text style={styles.buyButtonText}>{productData.buyButtonText}</Text>
 				</Pressable>
 			</View>
 		</View>

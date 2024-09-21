@@ -1,17 +1,18 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { Product_Detail } from './screen'
+import { Product, Product_Color } from './screen'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+
+const Stack = createStackNavigator()
+
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Product_Detail />
-		</View>
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen name="Product" component={Product} />
+				<Stack.Screen name="Product_Color" component={Product_Color} />
+			</Stack.Navigator>
+		</NavigationContainer>
 	)
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
-})
