@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, Pressable, FlatList } from 'react-native'
 import { Image } from 'expo-image'
+import { useNavigation } from '@react-navigation/native'
+
 const Screen_01 = () => {
+  const navigation = useNavigation()
   const data = [
     {
       "id": 1,
@@ -72,9 +75,9 @@ const Screen_01 = () => {
     return (
         <>
         <View style={styles.header}>
-            <View style={styles.header_text}>
+            <Pressable style={styles.header_text} onPress={() => navigation.navigate('Screen_02')}>
                 <Image source={require('../assets/vector.svg')} style={styles.header_icon} />
-            </View>
+            </Pressable>
               <Text style={styles.header_center}>Chat</Text>
             <View style={styles.header_right}>
                 <Image source={require('../assets/cart.svg')} style={styles.header_icon} />

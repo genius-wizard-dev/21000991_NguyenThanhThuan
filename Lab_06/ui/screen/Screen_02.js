@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, Pressable, FlatList, TextInput } from 'react-native'
 import { Image } from 'expo-image'
-
+import { useNavigation } from '@react-navigation/native'
 const Screen_02 = () => {
+  const navigation = useNavigation()
   const data = [
 	{
 	  "id": 1,
@@ -92,9 +93,9 @@ const Screen_02 = () => {
     return (
         <>
         <View style={styles.header}>
-            <View style={styles.headerLeft}>
+            <Pressable style={styles.headerLeft} onPress={() => navigation.navigate('Screen_01')}>
                 <Image source={require('../assets/vector.svg')} style={styles.headerIcon} />
-            </View>
+            </Pressable>
             <View style={styles.headerCenter}>
                 <View style={styles.searchContainer}>
                     <Image source={require('../assets/Screen_02/search.svg')} style={styles.searchIcon} />
