@@ -29,9 +29,9 @@ const Product_Color = () => {
           style={styles.productImage}
         />
         <View style={styles.textInfo}>
-          <Text style={styles.title}>{productData.title}</Text>
+          <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">{productData.title}</Text>
           <Text style={styles.colorText}>Màu: {selectedColor === 'black' ? 'Đen' : selectedColor === 'red' ? 'Đỏ' : selectedColor === 'blue' ? 'Xanh dương' : 'Bạc'}</Text>
-          <Text style={styles.provideText}>Cung cấp bởi Tiki Tradding</Text>
+          <Text style={styles.provideText}>Cung cấp bởi Tiki Trading</Text>
           <Text style={styles.price}>{productData.price}</Text>
         </View>
       </View>
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
   textInfo: {
     marginLeft: 20,
     justifyContent: 'space-between',
+    width: '50%'
   },
   title: {
     fontSize: 16,
