@@ -19,7 +19,7 @@ export default function Product() {
     const [color, setColor] = React.useState('black')
 
     const handleColorSelection = () => {
-        navigation.navigate('Product_Color', { productData, selectedColor: color })
+        navigation.navigate('Product_Color', { productData, setColor, color })
     }
 	return (
 		<View style={styles.container}>
