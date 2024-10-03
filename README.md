@@ -186,10 +186,11 @@
 ## Lab 07
 
 - [App](Lab_07/ui/App.js)
-- [Screen 01](Lab_07/ui/screen/Ex_01/Screen_01.js)
-  ![Screen 01](Lab_07/images/Ex_01/Screen_01.jpg)
-- [Screen 02](Lab_07/ui/screen/Ex_01/Screen_02.js)
-  ![Screen 02](Lab_07/images/Ex_01/Screen_02.jpg)
-- [Screen 03](Lab_07/ui/screen/Ex_01/Screen_03.js)
-  ![Screen 03](Lab_07/images/Ex_01/Screen_03.jpg)
-
+- [Home Screen](Lab_07/ui/screen/Ex_01/Screen_01.js)
+  ![Home Screen](Lab_07/images/Ex_01/Home.jpg)
+- [Todos Screen](Lab_07/ui/screen/Ex_01/Screen_02.js)
+  ![Todos Screen](Lab_07/images/Ex_01/Todos.jpg)
+- [Add Screen](Lab_07/ui/screen/Ex_01/Screen_03.js)
+  ![Add Screen](Lab_07/images/Ex_01/Add.jpg)
+- [Edit Screen](Lab_07/ui/screen/Ex_01/Screen_03.js)
+  ![Edit Screen](Lab_07/images/Ex_01/Edit.jpg)
