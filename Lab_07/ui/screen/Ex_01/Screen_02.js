@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   View, 
   Text, 
@@ -12,44 +12,29 @@ import {
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import Header from './header';
+import { useApp } from '../../context';
 
 const Screen_02 = () => {
+  const { state, dispatch, fetchData } = useApp();
   const navigation = useNavigation();
-  const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const fetchTodos = async() => {
-    setIsLoading(true);
-    await fetch('https://65fab81b3909a9a65b1b4dc5.mockapi.io/api/v1/todos', {
-      method: 'GET',
-      headers: {'content-type':'application/json'},
-    }).then(res => {
-      if (res.ok) {
-        return res.json();
-      }
-      throw new Error('Lỗi khi tải danh sách công việc');
-    }).then(tasks => {
-      setTodos(tasks);
-      setFilteredTodos(tasks);
-    }).catch(error => {
-      console.error('Lỗi:', error);
-    }).finally(() => {
-      setIsLoading(false);
-    });
-  };
-
   useEffect(() => {
-    fetchTodos();
-  }, []);
-
+    fetchData();
+  }, [])
   useEffect(() => {
-    const filtered = todos.filter(todo => 
-      todo.task.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredTodos(filtered);
-  }, [searchQuery, todos]);
+    if (state && state.data) {
+      const filtered = state.data.filter(todo => {
+        if (todo && typeof todo.task === 'string') {
+          return todo.task.toLowerCase().includes(searchQuery.toLowerCase());
+        }
+        return false;
+      });
+      setFilteredTodos(filtered);
+    } else {
+      setFilteredTodos([]);
+    }
+  }, [searchQuery, state.data]);
 
   const handleSearch = (text) => {
     setSearchQuery(text);
@@ -60,31 +45,20 @@ const Screen_02 = () => {
   };
 
   const handleEditTodo = (id) => {
-    navigation.navigate('Screen_03', { id: id });
+    navigation.navigate('Screen_03', { id });
   };
 
   const handleDeleteTodo = async (id) => {
-    setIsLoading(true);
     try {
       const response = await fetch(`https://65fab81b3909a9a65b1b4dc5.mockapi.io/api/v1/todos/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
-        const deletedTask = await response.json();
-        console.log('Công việc đã được xóa thành công:', deletedTask);
-        await fetchTodos();
-      } else {
-        console.log('Có lỗi khi xóa công việc');
+        dispatch({ type: 'DELETE_TODO', payload: id });
       }
     } catch (error) {
-      console.error('Lỗi khi gửi yêu cầu:', error);
-    } finally {
-      setIsLoading(false);
+      console.error('Error deleting todo:', error);
     }
-  };
-
-  const handleRefresh = () => {
-    fetchTodos();
   };
 
   const renderTodoItem = ({ item }) => (
@@ -124,13 +98,13 @@ const Screen_02 = () => {
           <Text style={styles.buttonText}>Thêm</Text>
         </TouchableOpacity>
         
-        <TouchableOpacity onPress={handleRefresh} style={styles.actionButton}>
+        <TouchableOpacity onPress={fetchData} style={styles.actionButton}>
           <Feather name="refresh-cw" size={24} color="white" />
           <Text style={styles.buttonText}>Làm mới</Text>
         </TouchableOpacity>
       </View>
       
-      {isLoading ? (
+      {state.loading ? (
         <ActivityIndicator size="large" color="#00BDD6" style={styles.loader} />
       ) : (
         <FlatList
