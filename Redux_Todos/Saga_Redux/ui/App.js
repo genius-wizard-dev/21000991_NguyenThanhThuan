@@ -1,8 +1,8 @@
-import React, { useReducer, useEffect } from 'react';
+import React from 'react';
+import { AppProvider } from './context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Screen_01, Screen_02, Screen_03 } from './screen/Ex_01';
-import { AppProvider } from './context';
 
 const Stack = createStackNavigator();
 
@@ -17,7 +17,6 @@ const screens = [
 ];
 
 export default function App() {
-
   return (
     <AppProvider>
       <NavigationContainer>
